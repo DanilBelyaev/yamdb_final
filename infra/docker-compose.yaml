@@ -10,7 +10,7 @@ services:
       - ./.env
       
   web:
-    image: weedcreedseed/yamdb_final:latest
+    image: weedcreedseed/api_yamdb:latest
     restart: always
     volumes:
       - static_value:/app/static/
