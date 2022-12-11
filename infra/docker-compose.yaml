@@ -10,7 +10,7 @@ services:
       - ./.env
       
   web:
-    image: bondarval/yamdb_api:latest
+    image: weedcreedseed/api_yamdb:latest
     restart: always
     volumes:
       - static_value:/app/static/
