@@ -42,7 +42,7 @@ jobs:
       with:
         file: ./api_yamdb/Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_HUB_USERNAME}}/yamdb_final:latest
+        tags: ${{ secrets.DOCKER_HUB_USERNAME}}/api_yamdb:latest
 
   deploy:
     runs-on: ubuntu-latest
@@ -58,7 +58,7 @@ jobs:
           script: |
             sudo docker-compose stop
             sudo docker-compose rm web
-            sudo docker pull weedcreedseed/yamdb_final:latest
+            sudo docker pull weedcreedseed/api_yamdb:latest
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
